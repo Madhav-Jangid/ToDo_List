@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: black;
+    background-color: #00203FFF;
     color: white;
 }
 
@@ -20,6 +20,7 @@ body{
 }
 
 .main h1{
+    color: #ADEFD1FF;
     padding-bottom: 10px;
 }
 
@@ -44,7 +45,7 @@ body{
 }
 
 #input::placeholder{
-    color: black;
+    color: #00203FFF;
 }
 
 #taskman{
@@ -68,8 +69,8 @@ body{
     align-items: center;
     outline: none;
     border: 2px solid rgb(0, 0, 0);
-    background-color: rgb(242, 161, 48);
-    color: black;
+    background-color: rgb(17, 126, 199);
+    color: rgb(255, 255, 255);
 }
 
 #taskbar p{
@@ -84,7 +85,7 @@ body{
     height: 2.6rem;
     outline: none;
     border: none;
-    background-color: red;
+    background-color: #ADEFD1FF;
     cursor: pointer;
 }
 
@@ -96,7 +97,7 @@ body{
     height: 2.6rem;
     outline: none;
     border: none;
-    background-color: rgb(255, 0, 0);
+    background-color: #ADEFD1FF;
     color: rgb(0, 0, 0);
     font-size: 20px;
     font-weight: 500;
@@ -135,38 +136,33 @@ footer{
     justify-content: center;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
+    background-color: #00203FFF;
     border-top: 2px solid white;
 }
 
 footer .btn{
     text-decoration: none;
-    color: white;
+    color: #00203FFF;
     width: calc(32%);
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
+    background-color: #ADEFD1FF;
 }
 
 /* profile */
-
-#body {
-    font-family: Arial, sans-serif;
-    background-color: #000000;
-    color: rgb(255, 255, 255);
+.superDiv{
     display: flex;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
+    flex-direction: column;
+    align-items: center;
 }
 
 #close{
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: red;
-    color: white;
+    background-color: #ADEFD1FF;
+    color: rgb(0, 0, 0);
     outline: none;
     border: 2px solid white;
     margin-bottom: 14px;
@@ -176,14 +172,14 @@ footer .btn{
 }
 
 .prof-container {
-    transition: 0.5s all ease;
+    animation: 0.5s slideFromBottom ease;
     display: none;
     position: absolute;
     background-color: #101011;
-    border: 3px solid rgb(255, 0, 0);
+    border: 3px solid #ADEFD1FF;
     width: 100%;
     max-width: 33rem;
-    margin: 0 10px;
+    margin: 5rem 10px;
     color: #ff0000;
     padding: 20px 5px;
     border-radius: 5px;
@@ -195,7 +191,7 @@ footer .btn{
 
 .prof-h1 {
     margin: 4rem 0;
-    color: #000000;
+    color: #00203FFF;
 }
 
 #signupDiv{
@@ -215,9 +211,9 @@ footer .btn{
 
 #login{
     width: 50%;
-    background-color: red;
-    color: black;
-    border: 2px solid black;
+    background-color: #ADEFD1FF;
+    color: #00203FFF;
+    border: 2px solid #00203FFF;
     height: 3rem;
     border-radius: 10px;
     font-size: 20px;
@@ -231,15 +227,20 @@ footer .btn{
 
 .feild{
     border: 2px solid grey;
-    background-color: rgb(199, 198, 196);
+    /* background-color: rgb(199, 198, 196); */
+    background-color: #ADEFD1FF;
     width: 100%;
     height: 2.6rem;
     border-radius: 40px;
     margin: 0 10px 8px 0;
     padding: 0 20px;
-    color: black;
+    color: #00203FFF;
     outline: none;
     font-size: 20px;
+}
+
+.feild::placeholder{
+    color: #000000;
 }
 
 .prof-btns{
@@ -248,9 +249,9 @@ footer .btn{
 
 .prof-btn{
     width: 50%;
-    background-color: red;
-    color: black;
-    border: 2px solid black;
+    background-color: #ADEFD1FF;
+    color: #00203FFF;
+    border: 2px solid #00203FFF;
     height: 3rem;
     border-radius: 10px;
     font-size: 20px;
@@ -261,9 +262,7 @@ footer .btn{
     align-items: center;
 }
 
-.prof-btn::placeholder{
-    color: black;
-}
+
 
 #sigbtn{
     background-color: white;
@@ -287,11 +286,11 @@ footer .btn{
 
 .bottombtn{
     text-decoration: none;
-    background-color: red;
-    color: black;
+    background-color: #ADEFD1FF;
+    color: #00203FFF;
     width: 100%;
     max-width: 33rem;
-    height: 2.6rem;
+    height: 3.8rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -299,4 +298,23 @@ footer .btn{
     font-weight: 700;
     border-radius: 0 0 10px 10px;
     margin-top: 3rem;
+}
+
+
+@keyframes slideFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideFromTop {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100%);
+    }
 }

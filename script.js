@@ -9,16 +9,49 @@ const buttonsdiv = document.getElementById('buttons');
 const search = document.getElementById('search');
 const clearall = document.getElementById('clear');
 const Profile = document.getElementById('profile');
+const closebtn = document.getElementById('close');
+
 
 function Profileveiw(){
     var profilediv = document.getElementById('pro-div-main');
+    document.getElementById('body').style.filter='blur(3px)';
     profilediv.style.display = 'block';
 }
 
-document.getElementById('close').addEventListener('click',function(){
+closebtn.addEventListener('click',function(){
     var profilediv = document.getElementById('pro-div-main');
+    document.getElementById('body').style.filter='none';
     profilediv.style.display = 'none';
 })
+
+
+var isSearchMode = false;
+
+document.getElementById('search').addEventListener('click', function() 
+{
+    var iconElement = document.querySelector('#add i');
+    var inputElement = document.getElementById('input');
+    var searchButton = document.getElementById('search');
+
+    if (isSearchMode) {
+        iconElement.classList.remove('bx-search-alt-2');
+        iconElement.classList.add('bx-list-plus');
+        iconElement.style.fontSize = '35px'; 
+        inputElement.placeholder = 'Add Task..'; 
+        inputElement.type = '';
+        searchButton.innerText = 'Search';
+    } else {
+        iconElement.classList.remove('bx-list-plus');
+        iconElement.classList.add('bx-search-alt-2');
+        iconElement.style.fontSize = '35px';
+        inputElement.placeholder = "Search Here..";
+        inputElement.type = "list";
+        searchButton.innerText = `X`;
+    }
+
+    // Toggle the state
+    isSearchMode = !isSearchMode;
+});
 
 
 var click = 0;
@@ -32,9 +65,6 @@ input.addEventListener('keyup',function(event){
     }
 })
 
-search.addEventListener('click',function(){
-    searchoprt();
-})
 
 var count = 0;
 function AddTask(){
@@ -49,6 +79,7 @@ function AddTask(){
         compl.classList.add("btn");
         compl.addEventListener('click',function(){
             neww.style.backgroundColor = 'rgb(109, 255, 90)';
+            neww.style.color = '#00203FFF';
             alert('Congratulation.. You Successfuly Completed a Task..👏')
         })
 
@@ -79,9 +110,7 @@ clearall.addEventListener('click',function(){
 })
 
 
-function togglecontent(){
-    input.style.backgroundColor= 'RED';
-}
+
 
 
 // Profile Page
@@ -93,13 +122,13 @@ function ChangePage1(){
     var logindiv = document.getElementById('loginDiv');
     var signupdv = document.getElementById('signupDiv');
     pagebutton1.style.backgroundColor = 'white';
-    pagebutton2.style.backgroundColor = 'red';
+    pagebutton2.style.backgroundColor = '#ADEFD1FF';
     logindiv.style.display = 'block';
     signupdv.style.display = 'none';
     var close = document.getElementById('close');
     close.style.backgroundColor = 'white';
-    close.style.color = 'black';
-    close.style.borderColor = 'red';
+    close.style.color = '#00203FFF';
+    close.style.borderColor = '#ADEFD1FF';
 }
 
 function ChangePage2(){
@@ -108,11 +137,11 @@ function ChangePage2(){
     var logindiv = document.getElementById('loginDiv');
     var signupdv = document.getElementById('signupDiv');
     pagebutton2.style.backgroundColor = 'white';
-    pagebutton1.style.backgroundColor = 'red';
+    pagebutton1.style.backgroundColor = '#ADEFD1FF';
     logindiv.style.display = 'none';
     signupdv.style.display = 'block';
     var close = document.getElementById('close');
-    close.style.backgroundColor = 'red';
-    close.style.color = 'white';
+    close.style.backgroundColor = '#ADEFD1FF';
+    close.style.color = 'black';
     close.style.borderColor = 'white';
-}
+}z

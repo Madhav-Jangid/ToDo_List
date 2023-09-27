@@ -10,33 +10,33 @@
 </head>
 
 <body>
-    <div class="main">
-
-        <h1>To-Do Application</h1>
+    <div class="superDiv">
         
-        <div class="intraction">
-            <input type="text" id="input" placeholder="Add Task.. ">
-            <button id="add"><i class='bx bx-list-plus'></i></button>
+        <div class="main" id="body">
+            <h1>To-Do Application</h1>
+            <div class="intraction">
+                <input type="text" id="input" placeholder="Add Task.. ">
+                <button id="add"><i class='bx bx-list-plus'></i></button>
+            </div>
+            <div class="task" id="taskman">
+                <div id="taskbar">
+                </div>
+                <div id="buttons"></div>
+            </div>
+            <div id="result"></div>
+            <footer>
+                <a class="btn" href="" id="clear">Clear All</a>
+                <button class="btn" href="" id="search"><i class='bx bx-search-alt-2'></i></button>
+                <a class="btn" id="profile" onclick="Profileveiw()">Profile</a>
+            </footer>
         </div>
-
-        <div class="task" id="taskman">
-            <div id="taskbar"></div>
-            <div id="buttons"></div>
-        </div>
-        
-        <div id="result"></div>
-
 
         <div class="prof-container" id="pro-div-main">
-
             <button id="close">x</button>
-
             <div class="prof-btns">
                 <button class="prof-btn" id="logbtn" onclick="ChangePage1()">Login</button>
                 <button class="prof-btn" id="sigbtn" onclick="ChangePage2()">Sign up</button>
             </div>
-    
-    
             <div id="loginDiv" class="div-cont">
                 <h1 class="prof-h1">Login</h1>
                 <form id="prof-login-form">
@@ -45,7 +45,6 @@
                     <a href="" id="loginb" class="bottombtn">Login</a>
                 </form>
             </div>
-    
             <div id="signupDiv" class="div-cont">
                 <h1 class="prof-h1">Sign Up</h1>
                 <form id="prof-sigin-form">
@@ -57,14 +56,8 @@
                 </form>
             </div>
         </div>
-        <footer>
-            <a class="btn" href="" id="clear">Clear All</a>
-            <a class="btn" href="" id="search" onclick="togglecontent()" ><i class='bx bx-search-alt-2'></i></a>
-            <a class="btn" id="profile" onclick="Profileveiw()">Profile</a>
-        </footer>
-    
+
     </div>
-    
     <script src="script.js"></script>
 </body>
 
