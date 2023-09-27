@@ -96,6 +96,10 @@ function ChangePage1(){
     pagebutton2.style.backgroundColor = 'red';
     logindiv.style.display = 'block';
     signupdv.style.display = 'none';
+    var close = document.getElementById('close');
+    close.style.backgroundColor = 'white';
+    close.style.color = 'black';
+    close.style.borderColor = 'red';
 }
 
 function ChangePage2(){
@@ -107,4 +111,8 @@ function ChangePage2(){
     pagebutton1.style.backgroundColor = 'red';
     logindiv.style.display = 'none';
     signupdv.style.display = 'block';
+    var close = document.getElementById('close');
+    close.style.backgroundColor = 'red';
+    close.style.color = 'white';
+    close.style.borderColor = 'white';
 }
