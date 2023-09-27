@@ -25,11 +25,42 @@
         </div>
         
         <div id="result"></div>
-        
+
+
+        <div class="prof-container" id="pro-div-main">
+
+            <button id="close">x</button>
+
+            <div class="prof-btns">
+                <button class="prof-btn" id="logbtn" onclick="ChangePage1()">Login</button>
+                <button class="prof-btn" id="sigbtn" onclick="ChangePage2()">Sign up</button>
+            </div>
+    
+    
+            <div id="loginDiv" class="div-cont">
+                <h1 class="prof-h1">Login</h1>
+                <form id="prof-login-form">
+                    <input class="feild" type="text" id="username" placeholder="Phone Number..">
+                    <input class="feild" type="password" id="password" placeholder="Password..">
+                    <a href="" id="loginb" class="bottombtn">Login</a>
+                </form>
+            </div>
+    
+            <div id="signupDiv" class="div-cont">
+                <h1 class="prof-h1">Sign Up</h1>
+                <form id="prof-sigin-form">
+                    <input class="feild" type="text" id="sigusername" placeholder="Name..">
+                    <input class="feild" type="date" id="sigusername" placeholder="Phone Number..">
+                    <input class="feild" type="text" id="sigusername" placeholder="Phone Number..">
+                    <input class="feild" type="password" id="sigpassword" placeholder="Password..">
+                    <a href="" id="signupb" class="bottombtn">Sign Up</a>
+                </form>
+            </div>
+        </div>
         <footer>
             <a class="btn" href="" id="clear">Clear All</a>
-            <a class="btn" href="" id="search"><i class='bx bx-search-alt-2'></i></a>
-            <a class="btn" href="">Profile</a>
+            <a class="btn" href="" id="search" onclick="togglecontent()" ><i class='bx bx-search-alt-2'></i></a>
+            <a class="btn" id="profile" onclick="Profileveiw()">Profile</a>
         </footer>
     
     </div>
