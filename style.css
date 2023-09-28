@@ -1,16 +1,16 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow: hidden;
 }
 
-body{
+body {
     background-color: #00203FFF;
     color: white;
 }
 
-.main{
+.main {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -19,20 +19,20 @@ body{
     align-items: center;
 }
 
-.main h1{
+.main h1 {
     color: #ADEFD1FF;
     padding-bottom: 10px;
 }
 
-.intraction{
+.intraction {
     display: flex;
     justify-content: center;
     width: 95%;
-    margin: 1.5rem 0 10px 0;    
+    margin: 1.5rem 0 10px 0;
     z-index: 999;
 }
 
-#input{
+#input {
     width: 100%;
     max-width: 30rem;
     height: 2.6rem;
@@ -44,21 +44,21 @@ body{
     background-color: rgb(199, 198, 196);
 }
 
-#input::placeholder{
+#input::placeholder {
     color: #00203FFF;
 }
 
-#taskman{
+#taskman {
     width: 100%;
     max-width: 33rem;
     overflow-y: visible;
 }
 
-#taskbar{
+#taskbar {
     width: 100%;
 }
 
-#taskbar p{
+#taskbar p {
     width: 100%;
     max-width: 82rem;
     height: 2.6rem;
@@ -73,13 +73,13 @@ body{
     color: rgb(255, 255, 255);
 }
 
-#taskbar p{
+#taskbar p {
     height: auto;
     overflow-y: scroll;
     padding: 20px;
 }
 
-#add{
+#add {
     width: 3rem;
     border-radius: 0 10px 10px 0;
     height: 2.6rem;
@@ -89,7 +89,7 @@ body{
     cursor: pointer;
 }
 
-.btn{
+.btn {
     width: 100%;
     max-width: 50%;
     border-radius: 10px;
@@ -97,8 +97,8 @@ body{
     height: 2.6rem;
     outline: none;
     border: none;
-    background-color: #ADEFD1FF;
-    color: rgb(0, 0, 0);
+    background-color: rgb(129, 94, 164);
+    color: #ADEFD1FF;
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
@@ -106,15 +106,16 @@ body{
     /* margin: 0 5px 20px 5px; */
 }
 
-.bx-list-plus{
+.bx-list-plus {
     font-size: 35px;
 }
 
-#result{
-    border: 2px solid white;
+#result {
+    border: 2px solid #ADEFD1FF;
     width: 95%;
     max-width: 33rem;
-    height: 30rem;
+    height: auto;
+    max-height: 65%;
     display: flex;
     border-radius: 10px;
     flex-direction: row;
@@ -122,11 +123,11 @@ body{
     overflow-y: scroll;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
 
-footer{
+footer {
     position: fixed;
     bottom: 1px;
     width: 95%;
@@ -137,10 +138,11 @@ footer{
     justify-content: space-between;
     align-items: center;
     background-color: #00203FFF;
-    border-top: 2px solid white;
+    /* border-top: 2px solid #ADEFD1FF; */
+    box-shadow: 0 -16px 25px rgb(0, 0, 0);
 }
 
-footer .btn{
+footer .btn {
     text-decoration: none;
     color: #00203FFF;
     width: calc(32%);
@@ -151,20 +153,20 @@ footer .btn{
 }
 
 /* profile */
-.superDiv{
+.superDiv {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#close{
+#close {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: #ADEFD1FF;
-    color: rgb(0, 0, 0);
+    background-color: #00203FFF;
+    color: #ADEFD1FF;
     outline: none;
-    border: 2px solid white;
+    border: 2px solid #ADEFD1FF;
     margin-bottom: 14px;
     position: inherit;
     right: 5px;
@@ -175,15 +177,15 @@ footer .btn{
     animation: 0.5s slideFromBottom ease;
     display: none;
     position: absolute;
-    background-color: #101011;
-    border: 3px solid #ADEFD1FF;
+    background-color: none;
+    /* border: 3px solid rgb(255, 255, 255); */
     width: 100%;
     max-width: 33rem;
     margin: 5rem 10px;
     color: #ff0000;
     padding: 20px 5px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 25px #ADEFD1FF; */
     text-align: center;
     z-index: 999999;
 }
@@ -191,28 +193,28 @@ footer .btn{
 
 .prof-h1 {
     margin: 4rem 0;
-    color: #00203FFF;
+    color: #ADEFD1FF;
 }
 
-#signupDiv{
+#signupDiv {
     display: block;
 }
 
-#loginDiv{
+#loginDiv {
     display: none;
 }
 
-#prof-login-form{
+#prof-login-form {
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 100%;
 }
 
-#login{
+#login {
     width: 50%;
-    background-color: #ADEFD1FF;
-    color: #00203FFF;
+    background-color: #00203FFF;
+    color: #ADEFD1FF;
     border: 2px solid #00203FFF;
     height: 3rem;
     border-radius: 10px;
@@ -225,7 +227,7 @@ footer .btn{
     align-items: center;
 }
 
-.feild{
+.feild {
     border: 2px solid grey;
     /* background-color: rgb(199, 198, 196); */
     background-color: #ADEFD1FF;
@@ -239,15 +241,15 @@ footer .btn{
     font-size: 20px;
 }
 
-.feild::placeholder{
+.feild::placeholder {
     color: #000000;
 }
 
-.prof-btns{
+.prof-btns {
     display: flex;
 }
 
-.prof-btn{
+.prof-btn {
     width: 50%;
     background-color: #ADEFD1FF;
     color: #00203FFF;
@@ -264,30 +266,37 @@ footer .btn{
 
 
 
-#sigbtn{
-    background-color: white;
+#sigbtn {
+    background-color: #00203FFF;
+    color: #ADEFD1FF;
     border-radius: 10px 10px 0 0;
-    border-bottom: white;
-    border-right: white;
+    border-top: 5px solid #ADEFD1FF;
+    border-right: 5px solid #ADEFD1FF;
+    /* border-left: 5px solid #ADEFD1FF; */
     transition: 0.5s all ease;
 }
 
-#logbtn{
+#logbtn {
     transition: 0.5s all ease;
     border-radius: 10px 10px 0 0;
-    border-bottom: white;
-    border-left: white;
+    border-top: 5px solid #ADEFD1FF;
+    /* border-right: 5px solid #ADEFD1FF; */
+    border-left: 5px solid #ADEFD1FF;
 }
 
-.div-cont{
-    background-color: white;
-    border-radius: 0 0 10px 10px;
+.div-cont {
+    background-color: #00203FFF;
+    border-radius: 0 0 15px 15px;
+    border-left: 5px solid #ADEFD1FF;
+    border-right: 5px solid #ADEFD1FF;
+    border-bottom: 5px solid #ADEFD1FF;
 }
 
-.bottombtn{
+.bottombtn {
     text-decoration: none;
     background-color: #ADEFD1FF;
     color: #00203FFF;
+    /* border: 2px solid #ADEFD1FF; */
     width: 100%;
     max-width: 33rem;
     height: 3.8rem;
@@ -298,13 +307,14 @@ footer .btn{
     font-weight: 700;
     border-radius: 0 0 10px 10px;
     margin-top: 3rem;
-}
 
+}
 
 @keyframes slideFromBottom {
     0% {
         transform: translateY(100%);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -314,7 +324,28 @@ footer .btn{
     0% {
         transform: translateY(0);
     }
+
     100% {
         transform: translateY(100%);
+    }
+}
+
+@keyframes slideFromleft {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromright {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
     }
 }

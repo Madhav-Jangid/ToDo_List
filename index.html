@@ -9,25 +9,25 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
-<body>
+<body id="X">
     <div class="superDiv">
         
         <div class="main" id="body">
-            <h1>To-Do Application</h1>
+            <h1 id="h1">To-Do Application</h1>
             <div class="intraction">
                 <input type="text" id="input" placeholder="Add Task.. ">
                 <button id="add"><i class='bx bx-list-plus'></i></button>
             </div>
             <div class="task" id="taskman">
-                <div id="taskbar">
-                </div>
+                <div id="taskbar"></div>
                 <div id="buttons"></div>
             </div>
             <div id="result"></div>
-            <footer>
-                <a class="btn" href="" id="clear">Clear All</a>
+            <footer id="foot">
+                <button class="btn" href="" id="clear">Clear All</button>
                 <button class="btn" href="" id="search"><i class='bx bx-search-alt-2'></i></button>
-                <a class="btn" id="profile" onclick="Profileveiw()">Profile</a>
+                <button class="btn" href="" id="theme"><i class='bx bx-sun'></i></button>
+                <button class="btn" href="" id="profile" onclick="Profileveiw()">Profile</button>
             </footer>
         </div>
 
